@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'THSarabun';
+    src: url('./THSarabun.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'THSarabun', sans-serif;
+    background-color: #b7e9ec;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Logo size */
+.navbar-brand img {
+    max-height: 75px;
+}
+
+/* Navbar styles */
+nav {
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px; 
+    margin-top: 30px;
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 40px;
+}
+
+.btn {
+    padding: 25px 20px;
+    border-radius: 50px;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition effect */
+}
+
+.primary-btn, .secondary-btn, .tertiary-btn {
+    background-color: #fc650e;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:active {
+    background-color: #69d34e; 
+    transform: scale(0.95); 
+}
+
+.container {
+    background-color: rgb(255, 248, 248);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1500px;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    color: #000000;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 50px;
+    background-color: #0067ac;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 5px solid #000000;
+    border-radius: 15px;
+    background-color: #e3f9ff;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.checkbox-item {
+    flex: 1 0 48%;
+    margin: 10px 0;
+}
+
+.checkbox-label {
+    display: block;
+    padding: 20px;
+    border: 2px solid #bdc3c7;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 40px;
+    background-color: #f0f0f0;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.temp-green {
+    background-color: #0bbb54;
+    color: white;
+}
+
+.temp-yellow {
+    background-color: #e6e20f;
+    color: rgb(255, 255, 255);
+}
+
+.temp-orange {
+    background-color: #e06900;
+    color: white;
+}
+
+.temp-red {
+    background-color: #d3200c;
+    color: white;
+}
+
+.duration {
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+}
+
+.duration label {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.duration select {
+    padding: 10px;
+    font-size: 30px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    transition: border-color 0.3s;
+}
+
+.duration select:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+
+label {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.container1 {
+    background-color: rgb(255, 248, 248);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1500px;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.symptom-group {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 5px solid #000000;
+    border-radius: 15px;
+    background-color: #e3f9ff;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-item {
+    flex: 1 0 45%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    background: lightgray; /* สีพื้นหลังเริ่มต้น */
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000000; /* สี Thumb */
+    cursor: pointer;
+}
+
+.slider {
+    display: none;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.slider-value {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 2rem; /* ขนาดตัวอักษรสำหรับระดับความรุนแรง */
+}
+
+.slider-number {
+    font-size: 2rem; /* ขนาดตัวอักษรสำหรับตัวเลข */
+    font-weight: bold;
+    margin-left: 10px; /* เพิ่มระยะห่างระหว่างตัวเลขและระดับ */
+}
+
+#save-button {
+    font-family: 'THSarabun', sans-serif;
+    font-size: 40px; /* Adjust font size as needed */
+    color: #ffffff; /* Text color */
+    background-color: #4CAF50; /* Green background color */
+    border: none; /* Remove default border */
+    border-radius: 12px; /* Rounded corners */
+    padding: 15px 30px; /* Padding for larger button size */
+    margin-bottom: 30px;
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
+}
+
+#save-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+#save-button:active {
+    background-color: #3e8e41; /* Slightly darker green when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+    transform: translateY(2px); /* Subtle button press effect */
+}
