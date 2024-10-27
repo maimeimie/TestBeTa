@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/dr.dusi-removebg-preview-6.png" type="image/x-icon">
+    <link rel="stylesheet" href="ประเมินอาการ.css">
+    <script> href="ประเมินอาการ.js"</script>
+    <script src="ประเมินอาการ.js"></script>
+    <title>แบบประเมินอาการเบื้องต้น</title>
+    </head>
+    <body>
+        <section class="menu-menu1" id="menu01-1">
+            <nav class="nav">
+                <div class="navbar-brand">
+                    <a href="Home.html">
+                        <img src="assets/images/dr.dusi-removebg-preview-6.png" alt="Brand Logo" class="brand-logo">
+                    </a>
+                </div>
+                <div class="navbar-content">
+                    <div class="navbar-buttons">
+                        <a class="btn primary-btn" href="Home.html#contacts02-3">โรงพยาบาลใกล้คุณ</a>
+                        <a class="btn secondary-btn" href="Home.html#contacts02-4">ร้านยาคุณภาพใกล้คุณ</a>
+                        <a class="btn tertiary-btn" href="Home.html#list01-8">วิธีดูแลตัวเอง</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <div class="container">
+            
+            <h1>แบบสอบถามประวัติผู้ป่วย กดเพื่อเลือก</h1>
+    
+            <div class="section">
+                <h2>อุณหภูมิร่างกาย</h2>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="radio" id="temp1" name="temperature" value="36.1°C - 37.2°C" onchange="handleTemperatureChange()">
+                        <label for="temp1" class="checkbox-label temp-green">36.1°C - 37.2°C</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" id="temp2" name="temperature" value="37.3°C - 38.0°C" onchange="handleTemperatureChange()">
+                        <label for="temp2" class="checkbox-label temp-yellow">37.3°C - 38.0°C</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" id="temp3" name="temperature" value="38.1°C - 39.4°C" onchange="handleTemperatureChange()">
+                        <label for="temp3" class="checkbox-label temp-orange">38.1°C - 39.4°C</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" id="temp4" name="temperature" value="มากกว่า 40°C" onchange="handleTemperatureChange()">
+                        <label for="temp4" class="checkbox-label temp-red">มากกว่า 40°C</label>
+                    </div>
+                </div>
+                <div class="duration" id="temperature-duration">
+                    <label for="duration-select">ระยะเวลา:</label>
+                    <select id="duration-select">
+                        <option value="1_day">1 วัน</option>
+                        <option value="2_days">2 วัน</option>
+                        <option value="3_days">3 วัน</option>
+                        <option value="more_than_3_days">มากกว่า 3 วัน</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="section">
+                <h2>โรคประจำตัว</h2>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="diabetes" name="disease" value="โรคเบาหวาน" onchange="handleCheckboxChange()">
+                        <label for="diabetes">โรคเบาหวาน</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hypertension" name="disease" value="โรคความดันโลหิตสูง" onchange="handleCheckboxChange()">
+                        <label for="hypertension">โรคความดันโลหิตสูง</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="heart" name="disease" value="โรคหัวใจ" onchange="handleCheckboxChange()">
+                        <label for="heart">โรคหัวใจ</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="arthritis" name="disease" value="โรคข้ออักเสบ" onchange="handleCheckboxChange()">
+                        <label for="arthritis">โรคข้ออักเสบ</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="obesity" name="disease" value="โรคอ้วน" onchange="handleCheckboxChange()">
+                        <label for="obesity">โรคอ้วน</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="osteoporosis" name="disease" value="โรคกระดูกพรุน" onchange="handleCheckboxChange()">
+                        <label for="osteoporosis">โรคกระดูกพรุน</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="depression" name="disease" value="โรคซึมเศร้า" onchange="handleCheckboxChange()">
+                        <label for="depression">โรคซึมเศร้า</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lung_cancer" name="disease" value="มะเร็งปอด" onchange="handleCheckboxChange()">
+                        <label for="lung_cancer">มะเร็งปอด</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="colon_cancer" name="disease" value="มะเร็งลำไส้ใหญ่" onchange="handleCheckboxChange()">
+                        <label for="colon_cancer">มะเร็งลำไส้ใหญ่</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="chronic_kidney" name="disease" value="โรคไตเรื้อรัง" onchange="handleCheckboxChange()">
+                        <label for="chronic_kidney">โรคไตเรื้อรัง</label>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>ปัจจัยเสี่ยง</h2>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="alcohol" name="risk" value="ดื่มแอลกอฮอลล์" onchange="handleCheckboxChange()">
+                        <label for="alcohol">ดื่มแอลกอฮอลล์ไหม</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="smoking" name="risk" value="สูบบุหรี่" onchange="handleCheckboxChange()">
+                        <label for="smoking">สูบบุหรี่ไหม</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container1">
+        <h1>กดปุ่มเพื่อเริ่มประเมินอาการเบื้องต้น</h1>
+    
+    <div class="symptom-group">
+        <h2>อาการปวดต่าง ๆ</h2>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="pain1" name="symptom" value="ปวดทั่วหัว" onchange="toggleSlider('pain1')">
+                <label for="pain1">ปวดทั่วหัว</label>
+                <input type="range" class="slider" id="slider-pain1" min="1" max="10" value="1" oninput="updateSlider('slider-pain1', 'value-pain1')">
+                <div class="slider-value" id="value-pain1" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pain2" name="symptom" value="ปวดที่ขมับ" onchange="toggleSlider('pain2')">
+                <label for="pain2">ปวดที่ขมับ</label>
+                <input type="range" class="slider" id="slider-pain2" min="1" max="10" value="1" oninput="updateSlider('slider-pain2', 'value-pain2')">
+                <div class="slider-value" id="value-pain2" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pain3" name="symptom" value="ปวดที่ด้านหลังหัว" onchange="toggleSlider('pain3')">
+                <label for="pain3">ปวดที่ด้านหลังหัว</label>
+                <input type="range" class="slider" id="slider-pain3" min="1" max="10" value="1" oninput="updateSlider('slider-pain3', 'value-pain3')">
+                <div class="slider-value" id="value-pain3" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pain4" name="symptom" value="ปวดด้านข้างหัว" onchange="toggleSlider('pain4')">
+                <label for="pain4">ปวดด้านข้างหัว</label>
+                <input type="range" class="slider" id="slider-pain4" min="1" max="10" value="1" oninput="updateSlider('slider-pain4', 'value-pain4')">
+                <div class="slider-value" id="value-pain4" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pain5" name="symptom" value="ปวดหลังส่วนบน" onchange="toggleSlider('pain5')">
+                <label for="pain5">ปวดหลังส่วนบน</label>
+                <input type="range" class="slider" id="slider-pain5" min="1" max="10" value="1" oninput="updateSlider('slider-pain5', 'value-pain5')">
+                <div class="slider-value" id="value-pain5" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pain6" name="symptom" value="ปวดหลังส่วนกลาง" onchange="toggleSlider('pain6')">
+                <label for="pain6">ปวดหลังส่วนกลาง</label>
+                <input type="range" class="slider" id="slider-pain6" min="1" max="10" value="1" oninput="updateSlider('slider-pain6', 'value-pain6')">
+                <div class="slider-value" id="value-pain6" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pain7" name="symptom" value="ปวดหลังส่วนล่าง" onchange="toggleSlider('pain7')">
+                <label for="pain7">ปวดหลังส่วนล่าง</label>
+                <input type="range" class="slider" id="slider-pain7" min="1" max="10" value="1" oninput="updateSlider('slider-pain7', 'value-pain7')">
+                <div class="slider-value" id="value-pain7" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pain8" name="symptom" value="ปวดท้องจากประจำเดือน" onchange="toggleSlider('pain8')">
+                <label for="pain8">ปวดท้องจากประจำเดือน</label>
+                <input type="range" class="slider" id="slider-pain8" min="1" max="10" value="1" oninput="updateSlider('slider-pain8', 'value-pain8')">
+                <div class="slider-value" id="value-pain8" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pain9" name="symptom" value="ปวดบริเวณก้นหรือก้นกบ" onchange="toggleSlider('pain9')">
+                <label for="pain9">ปวดบริเวณก้นหรือก้นกบ</label>
+                <input type="range" class="slider" id="slider-pain9" min="1" max="10" value="1" oninput="updateSlider('slider-pain9', 'value-pain9')">
+                <div class="slider-value" id="value-pain9" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pain10" name="symptom" value="ปวดข้อเข่า" onchange="toggleSlider('pain10')">
+                <label for="pain10">ปวดข้อเข่า</label>
+                <input type="range" class="slider" id="slider-pain10" min="1" max="10" value="1" oninput="updateSlider('slider-pain10', 'value-pain10')">
+                <div class="slider-value" id="value-pain10" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="symptom-group">
+        <h2>การหายใจ</h2>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="breathing1" name="symptom" value="หายใจลำบาก" onchange="toggleSlider('breathing1')">
+                <label for="breathing1">หายใจลำบาก</label>
+                <input type="range" class="slider" id="slider-breathing1" min="1" max="10" value="1" oninput="updateSlider('slider-breathing1', 'value-breathing1')">
+                <div class="slider-value" id="value-breathing1" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="breathing2" name="symptom" value="อาการเจ็บหน้าอก" onchange="toggleSlider('breathing2')">
+                <label for="breathing2">อาการเจ็บหน้าอก</label>
+                <input type="range" class="slider" id="slider-breathing2" min="1" max="10" value="1" oninput="updateSlider('slider-breathing2', 'value-breathing2')">
+                <div class="slider-value" id="value-breathing2" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="breathing3" name="symptom" value="อาการหายใจขัด" onchange="toggleSlider('breathing3')">
+                <label for="breathing3">อาการหายใจขัด</label>
+                <input type="range" class="slider" id="slider-breathing3" min="1" max="10" value="1" oninput="updateSlider('slider-breathing3', 'value-breathing3')">
+                <div class="slider-value" id="value-breathing3" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="breathing4" name="symptom" value="อาการเหนื่อยง่าย" onchange="toggleSlider('breathing4')">
+                <label for="breathing4">อาการเหนื่อยง่าย</label>
+                <input type="range" class="slider" id="slider-breathing4" min="1" max="10" value="1" oninput="updateSlider('slider-breathing4', 'value-breathing4')">
+                <div class="slider-value" id="value-breathing4" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="breathing5" name="symptom" value="หายใจเสียงดัง" onchange="toggleSlider('breathing5')">
+                <label for="breathing5">หายใจเสียงดัง</label>
+                <input type="range" class="slider" id="slider-breathing5" min="1" max="10" value="1" oninput="updateSlider('slider-breathing5', 'value-breathing5')">
+                <div class="slider-value" id="value-breathing5" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="breathing6" name="symptom" value="การหายใจผิดจังหวะ" onchange="toggleSlider('breathing6')">
+                <label for="breathing6">การหายใจผิดจังหวะ</label>
+                <input type="range" class="slider" id="slider-breathing6" min="1" max="10" value="1" oninput="updateSlider('slider-breathing6', 'value-breathing6')">
+                <div class="slider-value" id="value-breathing6" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="symptom-group">
+        <h2>อาการกล้ามเนื้อ</h2>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="muscle1" name="symptom" value="อาการเกร็งกล้ามเนื้อ" onchange="toggleSlider('muscle1')">
+                <label for="muscle1">อาการเกร็งกล้ามเนื้อ</label>
+                <input type="range" class="slider" id="slider-muscle1" min="1" max="10" value="1" oninput="updateSlider('slider-muscle1', 'value-muscle1')">
+                <div class="slider-value" id="value-muscle1" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="muscle2" name="symptom" value="อาการเสียการทรงตัว" onchange="toggleSlider('muscle2')">
+                <label for="muscle2">อาการเสียการทรงตัว</label>
+                <input type="range" class="slider" id="slider-muscle2" min="1" max="10" value="1" oninput="updateSlider('slider-muscle2', 'value-muscle2')">
+                <div class="slider-value" id="value-muscle2" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="muscle3" name="symptom" value="อาการชาเฉพาะจุด" onchange="toggleSlider('muscle3')">
+                <label for="muscle3">อาการชาเฉพาะจุด</label>
+                <input type="range" class="slider" id="slider-muscle3" min="1" max="10" value="1" oninput="updateSlider('slider-muscle3', 'value-muscle3')">
+                <div class="slider-value" id="value-muscle3" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="muscle4" name="symptom" value="อาการชาครึ่งซีก" onchange="toggleSlider('muscle4')">
+                <label for="muscle4">อาการชาครึ่งซีก</label>
+                <input type="range" class="slider" id="slider-muscle4" min="1" max="10" value="1" oninput="updateSlider('slider-muscle4', 'value-muscle4')">
+                <div class="slider-value" id="value-muscle4" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="muscle5" name="symptom" value="อาการอ่อนแรง" onchange="toggleSlider('muscle5')">
+                <label for="muscle5">อาการอ่อนแรง</label>
+                <input type="range" class="slider" id="slider-muscle5" min="1" max="10" value="1" oninput="updateSlider('slider-muscle5', 'value-muscle5')">
+                <div class="slider-value" id="value-muscle5" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="muscle6" name="symptom" value="อาการสั่น" onchange="toggleSlider('muscle6')">
+                <label for="muscle6">อาการสั่น</label>
+                <input type="range" class="slider" id="slider-muscle6" min="1" max="10" value="1" oninput="updateSlider('slider-muscle6', 'value-muscle6')">
+                <div class="slider-value" id="value-muscle6" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="symptom-group">
+        <h2>อาการทั่วไป</h2>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="general1" name="symptom" value="ไอ" onchange="toggleSlider('general1')">
+                <label for="general1">ไอ</label>
+                <input type="range" class="slider" id="slider-general1" min="1" max="10" value="1" oninput="updateSlider('slider-general1', 'value-general1')">
+                <div class="slider-value" id="value-general1" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="general2" name="symptom" value="จาม" onchange="toggleSlider('general2')">
+                <label for="general2">จาม</label>
+                <input type="range" class="slider" id="slider-general2" min="1" max="10" value="1" oninput="updateSlider('slider-general2', 'value-general2')">
+                <div class="slider-value" id="value-general2" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="general3" name="symptom" value="เวียนหัว" onchange="toggleSlider('general3')">
+                <label for="general3">เวียนหัว</label>
+                <input type="range" class="slider" id="slider-general3" min="1" max="10" value="1" oninput="updateSlider('slider-general3', 'value-general3')">
+                <div class="slider-value" id="value-general3" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="general4" name="symptom" value="คลื่นไส้" onchange="toggleSlider('general4')">
+                <label for="general4">คลื่นไส้</label>
+                <input type="range" class="slider" id="slider-general4" min="1" max="10" value="1" oninput="updateSlider('slider-general4', 'value-general4')">
+                <div class="slider-value" id="value-general4" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="general5" name="symptom" value="ท้องเสีย" onchange="toggleSlider('general5')">
+                <label for="general5">ท้องเสีย</label>
+                <input type="range" class="slider" id="slider-general5" min="1" max="10" value="1" oninput="updateSlider('slider-general5', 'value-general5')">
+                <div class="slider-value" id="value-general5" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="general6" name="symptom" value="ท้องผูก" onchange="toggleSlider('general6')">
+                <label for="general6">ท้องผูก</label>
+                <input type="range" class="slider" id="slider-general6" min="1" max="10" value="1" oninput="updateSlider('slider-general6', 'value-general6')">
+                <div class="slider-value" id="value-general6" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="general7" name="symptom" value="อาการคันที่ผิว" onchange="toggleSlider('general7')">
+                <label for="general7">อาการคันที่ผิว</label>
+                <input type="range" class="slider" id="slider-general7" min="1" max="10" value="1" oninput="updateSlider('slider-general7', 'value-general7')">
+                <div class="slider-value" id="value-general7" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="general8" name="symptom" value="นอนไม่หลับ" onchange="toggleSlider('general8')">
+                <label for="general8">นอนไม่หลับ</label>
+                <input type="range" class="slider" id="slider-general8" min="1" max="10" value="1" oninput="updateSlider('slider-general8', 'value-general8')">
+                <div class="slider-value" id="value-general8" style="display: none;">ระดับ: เล็กน้อย 1</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <button id="save-button" onclick="saveData()">ส่งข้อมูล</button>
+    
+    </body>
+    </html>
+    
